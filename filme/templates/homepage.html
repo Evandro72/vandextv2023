@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Home VandexTv
+{% endblock %}
+
+{% block head %}
+<style>
+
+    .iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+    #id_email {
+        width: 100%;
+        color: #000000;
+        padding: 5px 5px;
+    }
+
+    /* .content2 {
+        position: fixed;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    } */
+    /*
+        #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+
+    .content {
+      position: fixed;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    } */
+
+
+    header {
+        position: relative;
+    }
+
+    /*header video {*/
+    /*    width: 100%;*/
+    /*    height: auto;*/
+    /*}*/
+
+    /*.content {*/
+    /*    position: absolute;*/
+    /*    bottom: 40%;*/
+    /*    left: 1rem;*/
+    /*    text-transform: uppercase;*/
+
+    /*    line-height: 1;*/
+    /*}*/
+
+    #maincontent {
+        padding: 2rem;
+    }
+
+    /* @media all and (max-width: 750px) {
+      main {
+      width: 100%;
+      }
+    }
+    @media all and (max-width: 500px) {
+       header h1 {
+      bottom: 20%;
+      }
+    } */
+
+
+
+</style>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat">
+
+
+    <div class="  iframe-container">
+
+
+
+
+
+
+
+
+
+        <iframe width="1349" height="680" src="{{background_vid.video_url}}" title="vinyl-running" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</header>
+
+
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="z-10 py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+
+
+        <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+            Música, Poesia e Cultura Independente, tudo em um só lugar.
+
+        </h1>
+        <h3 class="text-xl md:text-xl py-5">
+            Assista onde quiser. Cancele quando quiser.
+        </h3>
+        <h4 class="text-sm md:text-lg pb-3">
+            Quer começar? Coloque seu e-mail abaixo para acessar.
+        </h4>
+
+
+        <div class="w-full flex justify-center">
+            <div class="flex justify-center items-center w-11/12 md:w-10/12">
+                <form method="post" class="w-6/12 justify-center">
+                    {% csrf_token %}
+                    <div class="flex flex-grow items-stretch">
+                        {{ form }}
+                        <button
+                                class="bg-red-600 font-medium md:font-normal flex justify-center items-center py-2 px-3 md:px-0 rounded-br-sm rounded-tr-sm md:text-2xl"
+                                type="submit">
+                            <span>
+                                Acessar
+                            </span>
+                            <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Enjoy on your TV.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+        </h5>
+    </div>
+    <div class='md:w-1/2 flex justify-center items-center'>
+        <img src="{% static 'images/tv.png' %}" class="w-8/12" alt="">
+    </div>
+</section>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class='md:w-1/2 flex justify-center items-center '>
+        <img src="{% static 'images/mobile-0819.jpg' %}" class="w-8/12" alt="">
+    </div>
+
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Download your shows to watch offline.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Save your favorites easily and always have something to watch.
+        </h5>
+    </div>
+
+</section>
+
+<section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Create profiles for kids.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Send kids on adventures with their favorite characters in a space made just for them—free with your
+            membership.
+        </h5>
+    </div>
+    <div class='md:w-1/2 flex justify-center items-center'>
+        <img src="{% static 'images/netflix_kid.png' %}" class="w-8/12" alt="">
+    </div>
+</section>
+
+
+<footer class=" px-5 py-10 ">
+    <ul class="flex justify-between items-center">
+
+        <li>&copy; 2021</li>
+        <li> VandexTv (Bahia-Brazil)</li>
+        <li>Berlim Puro! inc.</li>
+    </ul>
+</footer>
+
+
+{% endblock %}
