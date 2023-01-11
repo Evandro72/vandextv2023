@@ -18,6 +18,7 @@ class Homepage(FormView):
             # redireciona para a homefilmes
             return redirect('filme:homefilmes')
         else:
+            print('Line no 21 video url is:', background_video.objects.all().first())
 
             return super().get(request, *args, **kwargs) # redireciona para a homepage
 
