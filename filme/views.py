@@ -9,9 +9,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class Homepage(FormView):
     template_name = "homepage.html"
     form_class = FormHomepage
-    extra_context = {'background_vid': background_video.objects.all().first()}
+    #extra_context = {'background_vid': background_video.objects.all().first()}
 
-    print(background_video.objects.all().first())
+    #print(background_video.objects.all().first())
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated: #usuario esta autenticado:
