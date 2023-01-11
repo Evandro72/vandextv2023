@@ -11,7 +11,7 @@ class Homepage(FormView):
     form_class = FormHomepage
     extra_context = {'background_vid': background_video.objects.all().first()}
 
-    #print(background_video.objects.all().first())
+    print('Line no 14 video url is:',background_video.objects.all().first())
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated: #usuario esta autenticado:
