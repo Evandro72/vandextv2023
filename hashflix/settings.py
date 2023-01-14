@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(hmi*chx_15bp6*abb1v=hmu30t05!4s7yv5rof5a3m$aahadw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.vandex.tv', 'vandex.tv','127.0.0.1']
+ALLOWED_HOSTS = ['www.vandex.tv', 'vandex.tv','127.0.0.1', 'vandextv.herokuapp.com']
 
 
 # Application definition
